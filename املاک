@@ -1,0 +1,16 @@
+import cv2
+import numpy as np
+
+# ایجاد یک تصویر خالی
+image = np.zeros((512, 512, 3), np.uint8)
+
+# رنگ‌آمیزی تصویر
+image[:, :] = (255, 0, 0)  # رنگ قرمز
+
+# ذخیره تصویر
+cv2.imwrite('output.png', image)
+
+# نمایش تصویر
+cv2.imshow('Image', image)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
